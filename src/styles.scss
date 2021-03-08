@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+$black: #0D1821;
+$white: #EBEBEB;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: $white;
+    color: $black;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.score {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px auto;
+
+    .player-score, .pc-score {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+
+        .points {
+            font-size: 24px;
+            margin: 5px auto;
+        }
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50vh;
+    transition: opacity 0.25s ease;
+
+    .h1 {
+        font-family: 'Fredoka One', cursive;
+        font-size: 60px;
+    }
+
+    .intro-button {
+        width: 180px;
+        height: 45px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 17px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        background-color: $black;
+        color: $white;
+        letter-spacing: 1px;
+        margin: 35px auto;
+        cursor: pointer;
+    }    
+}
+
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.25s ease 0.25s;
+    margin: 1% auto;
+    width: 70%;
+
+    .h2 {
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        font-size: 60px;
+    }
+
+    .images, .options {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .option-button {
+            width: 160px;
+            height: 45px;
+            text-align: center;
+            line-height: 44px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            background-color: $black;
+            color: $white;
+            letter-spacing: 1px;
+            cursor: pointer;            
+        }
+
+        .player-hand {
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+.easeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.easeIn {
+    opacity: 1;
+    pointer-events: all;
+}
